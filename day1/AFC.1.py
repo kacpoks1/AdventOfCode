@@ -10,7 +10,7 @@ for line in data:
     right.append(int(numbers[1]))  # Druga liczba
 
 # Sortowanie obu list
-left_.sort()
+left.sort()
 right.sort()
 
 # Obliczanie całkowitej odległości
