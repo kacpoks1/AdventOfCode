@@ -1,4 +1,4 @@
-file = open("/home/kacper/Dokumenty/AdventOfCode/AFC.1.txt",'r')
+file = open("/home/kacper/Dokumenty/AdventOfCode/day1/AFC.1.txt",'r')
 
 data = file.read()
 
