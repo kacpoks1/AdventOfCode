@@ -1,22 +1,19 @@
-file = open("/home/kacper/Dokumenty/AdventOfCode/day1/AFC.1.txt",'r')
+with open("/home/kacper/Dokumenty/AdventOfCode/day1/AFC.1.txt", 'r') as file:
+    data = file.read().strip().split("\n")
 
-data = file.read()
-
-data = data.strip().split("\n")
-
-first = []
-second = []
+left = []
+right = []
 
 for line in data:
-    line = line.strip().split(" ")
-    first.append(line[0])
-    second.append(line[-1])
+    numbers = line.strip().split()  # Rozdziel linie według białych znaków
+    left.append(int(numbers[0]))  # Pierwsza liczba
+    right.append(int(numbers[1]))  # Druga liczba
 
+# Sortowanie obu list
+left_.sort()
+right.sort()
 
-score = 0
-
-for num in first:
-    score += int(num) * second.count(num)
-
+# Obliczanie całkowitej odległości
+score = sum(abs(left - right) for left, right in zip(left, right))
 
 print(score)
